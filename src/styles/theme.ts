@@ -1,6 +1,7 @@
 export const theme = {
   colors: {
-    primary: "#0F2A1D",
-    secondary: "#CFAE70",
+    primary: "#D32F2F",      // Vermelho forte
+    secondary: "#FFFFFF",    // Branco
+    accent: "#B71C1C",       // Vermelho escuro para hover
   },
 };
