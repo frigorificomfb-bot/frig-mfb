@@ -28,7 +28,7 @@ export default function Rastreabilidade() {
       </Section>
 
       {/* Cadeia de Rastreamento */}
-      <Section title="Nossa Cadeia de Rastreamento" className="bg-gray-50">
+      <Section title="Nossa Cadeia de Rastreamento" className="bg-gray-50 text-center">
         <div className="space-y-4">
           {[
             {
@@ -86,30 +86,51 @@ export default function Rastreabilidade() {
       </Section>
 
       {/* Tecnologia */}
-      <Section title="Tecnologia de Rastreamento">
+      <Section className="bg-gray-50">
+        {/* Título centralizado */}
+        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#D32F2F] mb-10">
+          Tecnologia de Rastreamento
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card
             icon="📡"
             title="Sistema GPS e IoT"
             description="Dispositivos de rastreamento em tempo real durante transporte e armazenamento."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
+
           <Card
             icon="🔐"
             title="Blockchain"
             description="Registro imutável de toda cadeia de produção garantindo integridade dos dados."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
+
           <Card
             icon="📱"
             title="Código QR"
             description="Consumidor pode escanear e acessar histórico completo do produto."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
+
           <Card
             icon="💾"
             title="Banco de Dados"
             description="Sistema integrado com registros de todas as operações e certificações."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
         </div>
       </Section>
+
 
       {/* Conformidade */}
       <Section className="bg-[#D32F2F] text-white">
