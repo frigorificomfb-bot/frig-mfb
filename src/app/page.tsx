@@ -31,21 +31,23 @@ export default function Home() {
         subtitle="Construindo o futuro da pecuária"
       />
 
-     <Section title="O QUE FAZEMOS">
-        <ImageText
-          title="Movidos pela excelência"
-          titleClassName="text-3xl md:text-4xl font-bold leading-tight"
-          content={`Na essência do Frigorífico MFB está um compromisso inegociável com a excelência. Cada etapa do nosso processo é conduzida com rigor técnico, atenção aos detalhes e profundo respeito pelo cliente. Nossa equipe atua com dedicação constante para entregar soluções cuidadosas e produtos que refletem qualidade superior.
+    <Section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ImageText
+            title="Movidos pela excelência"
+            titleClassName="text-3xl md:text-4xl font-bold leading-tight"
+            content={`Na essência do Frigorífico MFB está um compromisso inegociável com a excelência. Cada etapa do nosso processo é conduzida com rigor técnico, atenção aos detalhes e profundo respeito pelo cliente. Nossa equipe atua com dedicação constante para entregar soluções cuidadosas e produtos que refletem qualidade superior.
 
       Mais do que produzir carnes, criamos experiências marcadas por confiança, transparência e padrão elevado. Acreditamos que excelência não é um objetivo — é um princípio que orienta cada decisão.`}
-          contentClassName="leading-snug"
-          buttonText="SAIBA MAIS"
-          buttonHref="/sobre-nos"
-          image="/compromisso-com-o-planeta.jpg"
-          imagePosition="right"
-        />
+            contentClassName="leading-snug"
+            buttonText="SAIBA MAIS"
+            buttonHref="/sobre-nos"
+            image="/compromisso-com-o-planeta.jpg"
+            imagePosition="right"
+          />
+          
+        </div>
       </Section>
-
 
 
       {/* Seção: Nossos Pilares */}

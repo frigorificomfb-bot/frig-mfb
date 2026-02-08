@@ -34,50 +34,58 @@ export default function ImageText({
     </div>
   );
 
-  const contentEl = (
-    <div>
-      <h2
-        className={`
-          text-4xl md:text-5xl font-extrabold text-[#D32F2F] mb-6
-          ${titleClassName}
-        `}
+const contentEl = (
+  <div className="flex flex-col items-center text-center w-full">
+    <h2
+      className={`
+        text-4xl md:text-5xl font-extrabold text-[#D32F2F] mb-6
+        ${titleClassName}
+      `}
+    >
+      {title}
+    </h2>
+
+    <p
+      className={`
+        text-base sm:text-lg text-black leading-relaxed
+        max-w-4xl
+        ${contentClassName}
+      `}
+    >
+      {content}
+    </p>
+
+    {buttonText && buttonHref && (
+      <a
+        href={buttonHref}
+        className="mt-8 inline-block px-6 py-3 bg-[#D32F2F] text-white font-semibold rounded-lg hover:bg-[#B71C1C] transition-colors"
       >
-        {title}
-      </h2>
+        {buttonText}
+      </a>
+    )}
+  </div>
+);
 
-      <p
-        className={`
-          text-base sm:text-lg text-black leading-loose
-          ${contentClassName}
-        `}
-      >
-        {content}
-      </p>
 
-      {buttonText && buttonHref && (
-        <a
-          href={buttonHref}
-          className="mt-8 inline-block px-6 py-3 bg-[#D32F2F] text-white font-semibold rounded-lg hover:bg-[#B71C1C] transition-colors"
-        >
-          {buttonText}
-        </a>
-      )}
-    </div>
-  );
+ const hasImage = Boolean(image);
 
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-      {imagePosition === "left" ? (
-        <>
-          {imageEl}
-          {contentEl}
-        </>
-      ) : (
-        <>
-          {contentEl}
-          {imageEl}
-        </>
-      )}
-    </div>
-  );
+return (
+  <div
+    className={`grid ${
+      image ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"
+    } gap-16 items-start`}
+  >
+    {imagePosition === "left" ? (
+      <>
+        {image && imageEl}
+        {contentEl}
+      </>
+    ) : (
+      <>
+        {contentEl}
+        {image && imageEl}
+      </>
+    )}
+  </div>
+);
 }
