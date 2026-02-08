@@ -5,6 +5,10 @@ interface CardProps {
   image?: string;
   link?: string;
   className?: string;
+
+  // ✅ opcionais (não quebram nada)
+  titleClassName?: string;
+  contentClassName?: string;
 }
 
 export default function Card({
@@ -14,33 +18,29 @@ export default function Card({
   image,
   link,
   className = "",
+  titleClassName = "",
+  contentClassName = "",
 }: CardProps) {
-
   const cardContent = (
     <>
       {image && (
         <div className="mb-4 w-full h-36 rounded-lg overflow-hidden bg-gray-300 flex items-center justify-center">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
+          <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
       )}
 
       {icon && !image && (
-        <div className="mb-4 flex justify-center text-3xl">
-          {icon}
-        </div>
+        <div className="mb-4 flex justify-center text-3xl">{icon}</div>
       )}
 
-      {/* 🔥 Sem cor fixa */}
-      <h3 className="text-base sm:text-lg font-bold mb-3">
+      {/* ✅ continua igual, mas agora você pode sobrescrever */}
+      <h3 className={`text-base sm:text-lg font-bold mb-3 ${titleClassName}`}>
         {title}
       </h3>
 
-      {/* 🔥 Sem cor fixa */}
-      <p className="mx-auto w-full max-w-[36ch] text-sm leading-snug">
+      <p
+        className={`mx-auto w-full max-w-[36ch] text-sm leading-snug ${contentClassName}`}
+      >
         {description}
       </p>
     </>
@@ -57,9 +57,5 @@ export default function Card({
     );
   }
 
-  return (
-    <div className={`${baseClasses} ${className}`}>
-      {cardContent}
-    </div>
-  );
+  return <div className={`${baseClasses} ${className}`}>{cardContent}</div>;
 }

@@ -29,23 +29,40 @@ export default function Sustentabilidade() {
         />
       </Section>
 
-      {/* Pilares de Sustentabilidade */}
-      <Section className="bg-gray-50" title="Nossos Pilares">
+   {/* Pilares de Sustentabilidade */}
+<Section className="bg-gray-50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#D32F2F]">
+            Nossos Pilares
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card
-            icon="🌍"
+            icon={<span className="text-4xl">🌍</span>}
             title="Meio Ambiente"
             description="Redução de emissões de carbono, gestão sustentável de resíduos e uso eficiente de recursos naturais."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-xl transition-all duration-300"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
+
           <Card
-            icon="👥"
+            icon={<span className="text-4xl">👥</span>}
             title="Responsabilidade Social"
-            description="Programas comunitários, apoio a agricultura sustentável e compromisso com bem-estar dos colaboradores."
+            description="Programas comunitários, apoio à agricultura sustentável e compromisso com o bem-estar dos colaboradores."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-xl transition-all duration-300"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
+
           <Card
-            icon="🔬"
+            icon={<span className="text-4xl">🔬</span>}
             title="Inovação Responsável"
-            description="Investimento em tecnologias limpas e práticas inovadoras que reduzem impacto ambiental."
+            description="Investimento em tecnologias limpas e práticas inovadoras que reduzem o impacto ambiental."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-xl transition-all duration-300"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
           />
         </div>
       </Section>
