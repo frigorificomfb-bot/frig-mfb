@@ -12,29 +12,38 @@ export default function ServiceCard({
   image,
 }: ServiceCardProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      
       {/* Image */}
-      <div className="bg-gray-300 rounded-lg h-48 sm:h-64 md:h-72 lg:h-96 flex items-center justify-center text-gray-600">
-        {image ? (
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover rounded-lg"
-          />
-        ) : (
-          <p className="text-sm sm:text-base">Imagem</p>
-        )}
+      <div className="flex justify-center">
+        <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-72 object-cover"
+            />
+          ) : (
+            <div className="h-72 bg-gray-200 flex items-center justify-center text-gray-500">
+              Imagem
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Content */}
-      <div>
-        <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#D32F2F] mb-2 sm:mb-3 md:mb-4 leading-none">
+      <div className="max-w-xl">
+        <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#D32F2F]/20 leading-none">
           {number}
         </div>
-        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#D32F2F] mb-2 sm:mb-3 md:mb-4">
+
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#D32F2F] mt-2 mb-4">
           {title}
         </h3>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black leading-relaxed md:leading-loose">{description}</p>
+
+        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+          {description}
+        </p>
       </div>
     </div>
   );

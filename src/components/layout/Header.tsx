@@ -24,17 +24,20 @@ export default function Header() {
     <header className="border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
       <Container>
         <nav className="flex h-20 sm:h-24 md:h-28 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Image
-              src="/logomfb.webp"
-              alt="Frigorífico MFB Logo"
-              width={200}
-              height={60}
-              className="h-8 sm:h-10 md:h-14 w-auto"
-              priority
-            />
-          </Link>
+         {/* Logo */}
+      <Link
+        href="/"
+        className="flex items-center shrink-0 hover:opacity-80 transition-opacity"
+      >
+        <Image
+          src="/logomfb.png"
+          alt="Frigorífico MFB Logo"
+          width={180}
+          height={60}
+          priority
+          className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+        />
+      </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex gap-4 lg:gap-8">

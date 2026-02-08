@@ -1,27 +1,81 @@
+import Link from "next/link";
+
 interface HeroSectionProps {
   title: string;
   subtitle?: string;
   background?: string;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
 export default function HeroSection({
   title,
   subtitle,
-  background = "bg-[#D32F2F]",
+  background = "/hero-carne.png",
+  ctaText,
+  ctaHref,
 }: HeroSectionProps) {
   return (
-    <section className={`${background} text-white w-screen flex justify-center min-h-96 sm:min-h-[500px] md:min-h-[600px] lg:min-h-screen items-center py-12 sm:py-16 md:py-20 lg:py-24`}>
-      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight sm:leading-snug md:leading-normal text-white">
-            {title}
-          </h1>
-          {subtitle && (
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-3xl leading-relaxed md:leading-loose">
-              {subtitle}
-            </p>
-          )}
-        </div>
+    <section className="relative w-full min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
+
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${background})` }}
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/55" />
+
+      {/* Conteúdo */}
+      <div className="relative z-10 flex flex-col items-center text-center px-4">
+        <h1
+          className="
+            font-sans font-extrabold tracking-tight
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+            text-transparent
+            [-webkit-text-stroke:1.5px_white]
+          "
+        >
+          {title}
+        </h1>
+
+        {subtitle && (
+          <p
+            className="
+              mt-3
+              font-sans font-medium tracking-wide
+              text-sm sm:text-base md:text-lg
+              text-transparent
+              [-webkit-text-stroke:1px_white]
+            "
+          >
+            {subtitle}
+          </p>
+        )}
+
+        {ctaText && ctaHref && (
+          <Link
+            href={ctaHref}
+            className="
+              mt-8
+              inline-flex items-center justify-center
+              px-7 py-2
+              rounded-full
+              bg-[#D32F2F]
+              text-white
+              text-[11px]
+              font-bold
+              tracking-wide
+              shadow-md
+              hover:bg-[#B71C1C]
+              hover:shadow-lg
+              transition-all duration-300
+            "
+          >
+            {ctaText}
+          </Link>
+        )}
       </div>
     </section>
   );

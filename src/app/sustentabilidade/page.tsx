@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Conheça nossos programas e comprometimentos com sustentabilidade ambiental e responsabilidade social.",
 };
 
+
 export default function Sustentabilidade() {
   return (
     <main className="bg-white">
@@ -22,7 +23,8 @@ export default function Sustentabilidade() {
       <Section>
         <ImageText
           title="Compromisso com o Planeta"
-          content="A sustentabilidade não é apenas um programa, mas parte fundamental de nossa identidade corporativa. Reconhecemos que nossa responsabilidade vai além da produção de carnes de qualidade. Buscamos constantemente reduzir nosso impacto ambiental, respeitando as comunidades locais e contribuindo para um planeta mais saudável para as futuras gerações."
+          content="A sustentabilidade não é apenas um programa..."
+          image="/compromisso-com-o-planeta.jpg"
           imagePosition="right"
         />
       </Section>

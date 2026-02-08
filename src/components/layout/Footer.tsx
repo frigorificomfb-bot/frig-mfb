@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import Container from "./Container";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,32 +12,44 @@ export default function Footer() {
           {/* Logo & Social */}
           <div>
             <div className="mb-4 sm:mb-6">
-              <h3 className="font-bold text-base sm:text-lg text-[#D32F2F]">Frigorífico MFB</h3>
+              <h3 className="font-bold text-base sm:text-lg text-[#D32F2F]">
+                Frigorífico MFB
+              </h3>
             </div>
+
             <p className="text-xs sm:text-sm text-black mb-4 sm:mb-6 leading-relaxed">
               Qualidade e Rastreabilidade em cada corte
             </p>
-            <div className="flex gap-3 sm:gap-4">
+
+            <div className="flex gap-4 text-xl">
               <a
                 href="https://instagram.com"
-                className="text-[#D32F2F] hover:text-[#B71C1C] transition-colors text-lg sm:text-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D32F2F] hover:text-[#B71C1C] hover:scale-110 transition-all duration-200"
                 title="Instagram"
               >
-                📸
+                <FaInstagram />
               </a>
+
               <a
                 href="https://facebook.com"
-                className="text-[#D32F2F] hover:text-[#B71C1C] transition-colors text-lg sm:text-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D32F2F] hover:text-[#B71C1C] hover:scale-110 transition-all duration-200"
                 title="Facebook"
               >
-                f
+                <FaFacebookF />
               </a>
+
               <a
                 href="https://linkedin.com"
-                className="text-[#D32F2F] hover:text-[#B71C1C] transition-colors text-lg sm:text-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D32F2F] hover:text-[#B71C1C] hover:scale-110 transition-all duration-200"
                 title="LinkedIn"
               >
-                in
+                <FaLinkedinIn />
               </a>
             </div>
           </div>
@@ -58,6 +69,7 @@ export default function Footer() {
                 </a>
                 <p className="text-xs sm:text-sm">(11) 3456-7890</p>
               </li>
+
               <li>
                 <a
                   href="mailto:contato@frigorifico-mfb.com.br"
@@ -93,6 +105,7 @@ export default function Footer() {
             <h4 className="font-semibold text-[#D32F2F] mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
               Informações Gerais
             </h4>
+
             <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-black mb-4 sm:mb-6">
               <li>
                 <Link

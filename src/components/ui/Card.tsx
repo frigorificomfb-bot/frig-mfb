@@ -15,10 +15,11 @@ export default function Card({
   link,
   className = "",
 }: CardProps) {
+
   const cardContent = (
     <>
       {image && (
-        <div className="mb-4 w-full h-40 sm:h-48 md:h-56 rounded-lg overflow-hidden bg-gray-300 flex items-center justify-center">
+        <div className="mb-4 w-full h-36 rounded-lg overflow-hidden bg-gray-300 flex items-center justify-center">
           <img
             src={image}
             alt={title}
@@ -26,16 +27,27 @@ export default function Card({
           />
         </div>
       )}
-      {icon && !image && <div className="mb-4 text-4xl sm:text-5xl">{icon}</div>}
-      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 md:mb-4 text-[#D32F2F]">
+
+      {icon && !image && (
+        <div className="mb-4 flex justify-center text-3xl">
+          {icon}
+        </div>
+      )}
+
+      {/* 🔥 Sem cor fixa */}
+      <h3 className="text-base sm:text-lg font-bold mb-3">
         {title}
       </h3>
-      <p className="text-sm sm:text-base text-black leading-relaxed md:leading-loose">{description}</p>
+
+      {/* 🔥 Sem cor fixa */}
+      <p className="mx-auto w-full max-w-[36ch] text-sm leading-snug">
+        {description}
+      </p>
     </>
   );
 
   const baseClasses =
-    "p-4 sm:p-6 md:p-8 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300";
+    "p-5 bg-white rounded-xl shadow-sm ring-1 ring-black/5 hover:shadow-md transition-all duration-300 text-center flex flex-col items-center";
 
   if (link) {
     return (

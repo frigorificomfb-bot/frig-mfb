@@ -11,23 +11,28 @@ export default function Testimonial({
   author,
   role,
   location,
-  image,
 }: TestimonialProps) {
   return (
-    <div className="p-4 sm:p-6 md:p-8 bg-white rounded-lg border border-gray-200 text-center hover:shadow-lg transition-shadow duration-300">
-      <p className="text-xs sm:text-sm md:text-base text-black mb-4 sm:mb-6 italic leading-relaxed md:leading-loose min-h-16">
+    <div className="bg-[#D32F2F] text-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col justify-center">
+
+      <p className="italic text-base md:text-lg leading-relaxed mb-6">
         "{content}"
       </p>
-      {image && (
-        <div className="mb-3 sm:mb-4 flex justify-center">
-          <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-gray-600 text-xl sm:text-2xl">
-            👤
-          </div>
-        </div>
-      )}
-      <p className="font-semibold text-[#D32F2F] text-base sm:text-lg md:text-xl">{author}</p>
-      <p className="text-xs sm:text-sm text-black mb-1">{role}</p>
-      <p className="text-xs text-black">{location}</p>
+
+      <div className="space-y-1">
+        <h4 className="text-lg md:text-xl font-bold">
+          {author}
+        </h4>
+
+        <p className="text-white/80 text-sm">
+          {role}
+        </p>
+
+        <p className="text-white/70 text-sm">
+          {location}
+        </p>
+      </div>
+
     </div>
   );
 }

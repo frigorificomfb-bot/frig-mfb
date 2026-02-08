@@ -31,46 +31,61 @@ export default function Home() {
         subtitle="Construindo o futuro da pecuária"
       />
 
-      {/* Seção: O que fazemos */}
-      <Section title="O QUE FAZEMOS">
+     <Section title="O QUE FAZEMOS">
         <ImageText
           title="Movidos pela excelência"
-          content="No centro da nossa missão está um profundo compromisso com a excelência e a satisfação dos clientes. Nossa equipe trabalha incansavelmente para fornecer soluções cuidadosas, garantindo que cada detalhe reflita qualidade. Acreditamos em criar experiências significativas através de serviços personalizados e atenção aos detalhes."
+          titleClassName="text-3xl md:text-4xl font-bold leading-tight"
+          content={`Na essência do Frigorífico MFB está um compromisso inegociável com a excelência. Cada etapa do nosso processo é conduzida com rigor técnico, atenção aos detalhes e profundo respeito pelo cliente. Nossa equipe atua com dedicação constante para entregar soluções cuidadosas e produtos que refletem qualidade superior.
+
+      Mais do que produzir carnes, criamos experiências marcadas por confiança, transparência e padrão elevado. Acreditamos que excelência não é um objetivo — é um princípio que orienta cada decisão.`}
+          contentClassName="leading-snug"
           buttonText="SAIBA MAIS"
           buttonHref="/sobre-nos"
+          image="/compromisso-com-o-planeta.jpg"
           imagePosition="right"
         />
       </Section>
 
+
+
       {/* Seção: Nossos Pilares */}
-      <Section
-        title="EXPLORE NOSSO MUNDO"
-        className="bg-gray-50"
-      >
+      <Section className="bg-gray-50">
+        <h2 className="text-center text-2xl md:text-3xl font-extrabold text-[#D32F2F] mb-8">
+          EXPLORE NOSSO MUNDO
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card
             icon="🏆"
             title="Qualidade Garantida"
             description="Produzimos carnes de alta qualidade, seguindo rigorosos padrões internacionais de higiene e processamento, garantindo produtos premium para sua mesa."
+            className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
           />
+
           <Card
             icon="🔍"
             title="Rastreabilidade Total"
             description="Cada produto pode ser rastreado desde a origem do rebanho até o consumidor final, garantindo total transparência e segurança alimentar."
+            className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
           />
+
           <Card
             icon="🌱"
             title="Sustentabilidade"
             description="Práticas ambiental e socialmente responsáveis fazem parte do nosso crescimento, priorizando o bem-estar do planeta e das comunidades."
+            className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
           />
         </div>
       </Section>
 
+
+
       {/* Seção: Estatísticas */}
-      <Section
-        title="SOLUÇÕES FEITAS PARA SUAS NECESSIDADES"
-        className="bg-white"
-      >
+      <Section className="bg-white">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#D32F2F] mb-10">
+          SOLUÇÕES FEITAS PARA SUAS NECESSIDADES
+        </h2>
+
         <Stats
           stats={[
             { number: "500+", label: "Cabeças por Mês" },
@@ -81,26 +96,31 @@ export default function Home() {
         />
       </Section>
 
+
       {/* Seção: Processo */}
-      <Section title="PROCESSO">
+      <Section title="PROCESSO" className="text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           <ProcessStep
             icon="🐄"
             title="Abate"
             description="Processo humanizado com máximos padrões de bem-estar animal"
+            className="bg-[#D32F2F] text-white"
           />
           <ProcessStep
             icon="🔪"
             title="Processamento"
             description="Técnicas modernas de processamento garantindo máxima qualidade"
+            className="bg-[#D32F2F] text-white"
           />
           <ProcessStep
             icon="📦"
             title="Comercialização"
             description="Distribuição eficiente com rastreabilidade completa"
+            className="bg-[#D32F2F] text-white"
           />
         </div>
       </Section>
+
 
       {/* Seção: Serviços Numerados */}
       <Section className="bg-gray-50">
@@ -109,35 +129,43 @@ export default function Home() {
             number="01"
             title="Qualidade"
             description="Dedicated to providing exceptional service with a focus on quality. Our commitment to excellence drives every decision we make. We believe in creating lasting relationships through personalized attention to detail."
-            image=""
+            image="/qualidade-frig.png"
           />
           <ServiceCard
             number="02"
             title="Atendimento"
             description="Nosso atendimento especializado busca compreender suas necessidades específicas. Oferecemos suporte técnico completo e orientação profissional em todas as etapas."
-            image=""
+            image="/atendimento-frig.jpg"
           />
           <ServiceCard
             number="03"
             title="Processamento"
             description="Utilizamos tecnologia de ponta para garantir processamento eficiente e seguro. Nossa estrutura moderna permite máxima produtividade mantendo qualidade."
-            image=""
+            image="/processamento-frig.jpg"
           />
           <ServiceCard
             number="04"
             title="Rastreabilidade"
             description="Sistema completo de rastreamento do rebanho ao consumidor final. Transparência total com tecnologia blockchain e código QR para verificação."
-            image=""
+            image="/rastreabilidade-frig.jpg"
           />
         </div>
       </Section>
 
       {/* Seção: Depoimentos */}
       <Section
-        title="ATENDIMENTO EXCEPCIONAL"
-        subtitle="Ouça da boca de quem confía em nosso trabalho"
+        className="bg-white"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#D32F2F]">
+            ATENDIMENTO EXCEPCIONAL
+          </h2>
+          <p className="mt-3 text-gray-600 text-base md:text-lg">
+            Ouça da boca de quem confía em nosso trabalho
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <Testimonial
             content="Suporte confiável projetado para fornecer soluções rápidas e eficazes. A qualidade da carne é excepcional."
             author="Cliente Satisfeito"
@@ -165,27 +193,28 @@ export default function Home() {
         </div>
       </Section>
 
+
       {/* CTA Final */}
-      <section className="bg-[#D32F2F] text-white w-screen flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
-        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-white">
-            Quer Conhecer Nossos Produtos?
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto text-white leading-relaxed md:leading-loose">
-            Entre em contato conosco para conhecer nossas soluções em qualidade,
-            rastreabilidade e sustentabilidade. Nossa equipe está pronta para
-            ajudar.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center">
-            <Button href="/contato" variant="secondary">
-              Entrar em Contato
-            </Button>
-            <Button href="/rastreabilidade" variant="outline">
-              Saiba Sobre Rastreabilidade
-            </Button>
-          </div>
+   <section className="bg-[#D32F2F] text-white w-full flex justify-center py-16">
+      <div className="w-full max-w-7xl px-6 text-center">
+
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          Quer Conhecer Nossos Produtos?
+        </h2>
+
+        <p className="text-base md:text-lg mb-8 whitespace-nowrap">
+          Entre em contato conosco para conhecer nossas soluções em qualidade, rastreabilidade e sustentabilidade. Nossa equipe está pronta para ajudar.
+        </p>
+
+        <div className="flex justify-center">
+          <Button href="/contato" variant="secondary">
+            Entrar em Contato
+          </Button>
         </div>
-      </section>
+
+      </div>
+    </section>
+
     </main>
   );
 }

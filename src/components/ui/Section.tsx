@@ -12,7 +12,7 @@ export default function Section({
   className = "",
 }: SectionProps) {
   return (
-    <section className={`w-screen flex justify-center py-12 sm:py-16 md:py-20 lg:py-24 ${className}`}>
+    <section className={`relative w-full flex justify-center py-12 sm:py-16 md:py-20 lg:py-24 ${className}`}>
       <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {title && (
           <div className="mb-8 sm:mb-12 md:mb-16">
@@ -20,7 +20,9 @@ export default function Section({
               {title}
             </h2>
             {subtitle && (
-              <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl leading-relaxed">{subtitle}</p>
+              <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl leading-relaxed">
+                {subtitle}
+              </p>
             )}
           </div>
         )}
@@ -28,4 +30,6 @@ export default function Section({
       </div>
     </section>
   );
+  
 }
+
