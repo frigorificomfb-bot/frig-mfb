@@ -13,12 +13,14 @@ export default function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">(
+    "idle"
+  );
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -32,11 +34,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Simular envio do formulário
       console.log("Formulário enviado:", formData);
-
-      // Aqui você pode integrar com um serviço de email real
-      // await fetch("/api/send-email", { method: "POST", body: JSON.stringify(formData) })
 
       setSubmitStatus("success");
       setFormData({
@@ -48,7 +46,6 @@ export default function ContactForm() {
         message: "",
       });
 
-      // Limpar mensagem de sucesso após 5 segundos
       setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
@@ -60,10 +57,18 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-3xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
+    <form
+      onSubmit={handleSubmit}
+      className="
+        w-full max-w-3xl mx-auto
+        flex flex-col items-center
+        text-center
+        space-y-4 sm:space-y-6 md:space-y-8
+      "
+    >
       {/* Mensagem de Sucesso */}
       {submitStatus === "success" && (
-        <div className="p-3 sm:p-4 md:p-6 bg-green-50 border border-green-200 rounded-lg">
+        <div className="w-full p-3 sm:p-4 md:p-6 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-sm sm:text-base text-green-800 font-semibold">
             ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
           </p>
@@ -72,7 +77,7 @@ export default function ContactForm() {
 
       {/* Mensagem de Erro */}
       {submitStatus === "error" && (
-        <div className="p-3 sm:p-4 md:p-6 bg-red-50 border border-red-200 rounded-lg">
+        <div className="w-full p-3 sm:p-4 md:p-6 bg-red-50 border border-red-200 rounded-lg">
           <p className="text-sm sm:text-base text-red-800 font-semibold">
             ✗ Erro ao enviar mensagem. Por favor, tente novamente.
           </p>
@@ -80,8 +85,8 @@ export default function ContactForm() {
       )}
 
       {/* Nome */}
-      <div>
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3">
+      <div className="w-full">
+        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
           Nome Completo *
         </label>
         <input
@@ -90,14 +95,21 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#D32F2F] focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20 transition-colors"
+          className="
+            w-full px-3 sm:px-4 py-2 sm:py-3
+            text-sm sm:text-base text-center
+            border border-gray-300 rounded-lg
+            focus:outline-none focus:border-[#D32F2F]
+            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            transition-colors
+          "
           placeholder="Seu nome"
         />
       </div>
 
       {/* Email */}
-      <div>
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3">
+      <div className="w-full">
+        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
           Email *
         </label>
         <input
@@ -106,14 +118,21 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#D32F2F] focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20 transition-colors"
+          className="
+            w-full px-3 sm:px-4 py-2 sm:py-3
+            text-sm sm:text-base text-center
+            border border-gray-300 rounded-lg
+            focus:outline-none focus:border-[#D32F2F]
+            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            transition-colors
+          "
           placeholder="seu.email@exemplo.com"
         />
       </div>
 
       {/* Telefone */}
-      <div>
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3">
+      <div className="w-full">
+        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
           Telefone
         </label>
         <input
@@ -121,14 +140,21 @@ export default function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#D32F2F] focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20 transition-colors"
+          className="
+            w-full px-3 sm:px-4 py-2 sm:py-3
+            text-sm sm:text-base text-center
+            border border-gray-300 rounded-lg
+            focus:outline-none focus:border-[#D32F2F]
+            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            transition-colors
+          "
           placeholder="(XX) XXXX-XXXX"
         />
       </div>
 
       {/* Empresa */}
-      <div>
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3">
+      <div className="w-full">
+        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
           Empresa/Organização
         </label>
         <input
@@ -136,14 +162,21 @@ export default function ContactForm() {
           name="company"
           value={formData.company}
           onChange={handleChange}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#D32F2F] focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20 transition-colors"
+          className="
+            w-full px-3 sm:px-4 py-2 sm:py-3
+            text-sm sm:text-base text-center
+            border border-gray-300 rounded-lg
+            focus:outline-none focus:border-[#D32F2F]
+            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            transition-colors
+          "
           placeholder="Sua empresa"
         />
       </div>
 
       {/* Assunto */}
-      <div>
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3">
+      <div className="w-full">
+        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
           Assunto *
         </label>
         <select
@@ -151,7 +184,14 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           required
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#D32F2F] focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20 transition-colors"
+          className="
+            w-full px-3 sm:px-4 py-2 sm:py-3
+            text-sm sm:text-base text-center
+            border border-gray-300 rounded-lg
+            focus:outline-none focus:border-[#D32F2F]
+            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            transition-colors
+          "
         >
           <option value="">Selecione um assunto</option>
           <option value="vendas">Vendas e Produtos</option>
@@ -163,8 +203,8 @@ export default function ContactForm() {
       </div>
 
       {/* Mensagem */}
-      <div>
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3">
+      <div className="w-full">
+        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
           Mensagem *
         </label>
         <textarea
@@ -173,17 +213,31 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={6}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#D32F2F] focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20 resize-none transition-colors"
+          className="
+            w-full px-3 sm:px-4 py-2 sm:py-3
+            text-sm sm:text-base text-center
+            border border-gray-300 rounded-lg
+            focus:outline-none focus:border-[#D32F2F]
+            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            resize-none transition-colors
+          "
           placeholder="Sua mensagem..."
         />
       </div>
 
       {/* Botão Enviar */}
-      <div>
+      <div className="w-full">
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base bg-[#D32F2F] text-white font-semibold rounded-lg hover:bg-[#B71C1C] active:bg-[#A01818] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+          className="
+            w-full px-4 sm:px-6 py-2 sm:py-3
+            text-sm sm:text-base
+            bg-[#D32F2F] text-white font-semibold rounded-lg
+            hover:bg-[#B71C1C] active:bg-[#A01818]
+            disabled:opacity-50 disabled:cursor-not-allowed
+            transition-colors duration-200
+          "
         >
           {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
         </button>
