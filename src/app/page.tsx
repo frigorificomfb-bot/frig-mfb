@@ -50,35 +50,42 @@ export default function Home() {
       </Section>
 
 
-      {/* Seção: Nossos Pilares */}
-      <Section className="bg-gray-50">
-        <h2 className="text-center text-2xl md:text-3xl font-extrabold text-[#D32F2F] mb-8">
-          EXPLORE NOSSO MUNDO
-        </h2>
+     {/* Seção: Nossos Pilares */}
+<Section className="bg-gray-50">
+  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-[#D32F2F] mb-10">
+    EXPLORE NOSSO MUNDO
+  </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card
-            icon="🏆"
-            title="Qualidade Garantida"
-            description="Produzimos carnes de alta qualidade, seguindo rigorosos padrões internacionais de higiene e processamento, garantindo produtos premium para sua mesa."
-            className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
-          />
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <Card
+      icon="🏆"
+      title="Qualidade Garantida"
+      description="Produzimos carnes de alta qualidade, seguindo rigorosos padrões internacionais de higiene e processamento, garantindo produtos premium para sua mesa."
+      className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
+      titleClassName="!text-white"
+      contentClassName="!text-white/90"
+    />
 
-          <Card
-            icon="🔍"
-            title="Rastreabilidade Total"
-            description="Cada produto pode ser rastreado desde a origem do rebanho até o consumidor final, garantindo total transparência e segurança alimentar."
-            className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
-          />
+    <Card
+      icon="🔍"
+      title="Rastreabilidade Total"
+      description="Cada produto pode ser rastreado desde a origem do rebanho até o consumidor final, garantindo total transparência e segurança alimentar."
+      className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
+      titleClassName="!text-white"
+      contentClassName="!text-white/90"
+    />
 
-          <Card
-            icon="🌱"
-            title="Sustentabilidade"
-            description="Práticas ambiental e socialmente responsáveis fazem parte do nosso crescimento, priorizando o bem-estar do planeta e das comunidades."
-            className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
-          />
-        </div>
-      </Section>
+    <Card
+      icon="🌱"
+      title="Sustentabilidade"
+      description="Práticas ambiental e socialmente responsáveis fazem parte do nosso crescimento, priorizando o bem-estar do planeta e das comunidades."
+      className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
+      titleClassName="!text-white"
+      contentClassName="!text-white/90"
+    />
+  </div>
+</Section>
+
 
 
 
