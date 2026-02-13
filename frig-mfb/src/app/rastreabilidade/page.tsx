@@ -1,0 +1,154 @@
+import { Metadata } from "next";
+import HeroSection from "@/components/ui/HeroSection";
+import Section from "@/components/ui/Section";
+import Card from "@/components/ui/Card";
+import ImageText from "@/components/ui/ImageText";
+
+export const metadata: Metadata = {
+  title: "Rastreabilidade | Frigorífico MFB",
+  description:
+    "Conheça nosso sistema completo de rastreabilidade que garante transparência total do rebanho ao consumidor.",
+};
+
+export default function Rastreabilidade() {
+  return (
+    <main className="bg-white">
+      <HeroSection
+        title="Rastreabilidade Completa"
+        subtitle="Transparência total da origem ao consumidor final"
+      />
+
+      {/* O que é Rastreabilidade */}
+      <Section>
+        <ImageText
+          title="Transparência Total da Origem ao Consumidor"
+          content="A rastreabilidade é o núcleo de nossa operação. Significa que cada produto pode ser rastreado em todas as etapas, desde o rebanho de origem até a mesa do consumidor. Este compromisso garante total segurança alimentar, qualidade máxima e transparência, dando ao consumidor confiança absoluta no que está consumindo."
+          imagePosition="right"
+        />
+      </Section>
+
+      {/* Cadeia de Rastreamento */}
+      <Section title="Nossa Cadeia de Rastreamento" className="bg-gray-50 text-center">
+        <div className="space-y-4">
+          {[
+            {
+              step: "01",
+              title: "Origem do Rebanho",
+              description:
+                "Identificação e documentação completa de cada animal desde seu nascimento, com registro de saúde e alimentação.",
+            },
+            {
+              step: "02",
+              title: "Transporte Seguro",
+              description:
+                "Transporte rastreado com GPS e registro de condições de bem-estar animal durante todo o trajeto.",
+            },
+            {
+              step: "03",
+              title: "Processamento",
+              description:
+                "Cada etapa do processamento é registrada, incluindo inspeção veterinária, higiene e qualidade.",
+            },
+            {
+              step: "04",
+              title: "Embalagem",
+              description:
+                "Produtos embalados com código de rastreamento exclusivo e data de validade garantida.",
+            },
+            {
+              step: "05",
+              title: "Distribuição",
+              description:
+                "Rastreamento de distribuição com registro de temperatura e condições de armazenamento.",
+            },
+            {
+              step: "06",
+              title: "Consumidor",
+              description:
+                "Consumidor final pode escanear código QR para acessar histórico completo do produto.",
+            },
+          ].map((phase, index) => (
+            <div key={index} className="flex gap-4 sm:gap-6 pb-6 sm:pb-8 border-b border-gray-200 last:border-b-0">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-10 sm:h-12 w-10 sm:w-12 rounded-full bg-[#D32F2F] text-white font-bold text-sm sm:text-base">
+                  {phase.step}
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg sm:text-xl font-bold text-[#D32F2F] mb-1 sm:mb-2">
+                  {phase.title}
+                </h3>
+                <p className="text-xs sm:text-base text-black leading-relaxed">{phase.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Tecnologia */}
+      <Section className="bg-gray-50">
+        {/* Título centralizado */}
+        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#D32F2F] mb-10">
+          Tecnologia de Rastreamento
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card
+            icon="📡"
+            title="Sistema GPS e IoT"
+            description="Dispositivos de rastreamento em tempo real durante transporte e armazenamento."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
+          />
+
+          <Card
+            icon="🔐"
+            title="Blockchain"
+            description="Registro imutável de toda cadeia de produção garantindo integridade dos dados."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
+          />
+
+          <Card
+            icon="📱"
+            title="Código QR"
+            description="Consumidor pode escanear e acessar histórico completo do produto."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
+          />
+
+          <Card
+            icon="💾"
+            title="Banco de Dados"
+            description="Sistema integrado com registros de todas as operações e certificações."
+            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
+            titleClassName="!text-white"
+            contentClassName="!text-white/90"
+          />
+        </div>
+      </Section>
+
+
+      {/* Conformidade */}
+      <Section className="bg-[#D32F2F] text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">Padrões e Certificações</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {[
+            "ISO 22000 - Segurança Alimentar",
+            "ISO 14001 - Gestão Ambiental",
+            "MAPA - Conformidade Nacional",
+            "Certificação de Bem-estar Animal",
+          ].map((cert, index) => (
+            <div key={index} className="flex items-start gap-3 sm:gap-4">
+              <div className="text-2xl sm:text-3xl flex-shrink-0">✓</div>
+              <div>{cert}</div>
+            </div>
+          ))}
+        </div>
+      </Section>
+    </main>
+  );
+}
