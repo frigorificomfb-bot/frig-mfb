@@ -30,16 +30,16 @@ export default function Card({
       )}
 
       {icon && !image && (
-        <div className="mb-4 flex justify-center text-3xl">{icon}</div>
+        <div className="mb-6 flex justify-center text-4xl sm:text-5xl">{icon}</div>
       )}
 
       {/* ✅ continua igual, mas agora você pode sobrescrever */}
-      <h3 className={`text-base sm:text-lg font-bold mb-3 ${titleClassName}`}>
+      <h3 className={`text-xl sm:text-2xl font-bold mb-4 ${titleClassName}`}>
         {title}
       </h3>
 
       <p
-        className={`mx-auto w-full max-w-[36ch] text-sm leading-snug ${contentClassName}`}
+        className={`mx-auto w-full max-w-[32ch] text-base leading-relaxed ${contentClassName}`}
       >
         {description}
       </p>
@@ -47,7 +47,7 @@ export default function Card({
   );
 
   const baseClasses =
-    "p-5 bg-white rounded-xl shadow-sm ring-1 ring-black/5 hover:shadow-md transition-all duration-300 text-center flex flex-col items-center";
+    "p-8 sm:p-10 bg-white rounded-2xl shadow-md ring-1 ring-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center h-full";
 
   if (link) {
     return (

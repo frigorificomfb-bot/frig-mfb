@@ -13,7 +13,7 @@ export default function Testimonial({
   location,
 }: TestimonialProps) {
   return (
-    <div className="bg-[#D32F2F] text-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col justify-center">
+    <div className="bg-primary text-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col justify-center">
 
       <p className="italic text-base md:text-lg leading-relaxed mb-6">
         "{content}"

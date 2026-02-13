@@ -21,9 +21,9 @@ export default function Button({
     "px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors inline-block text-center text-sm sm:text-base md:text-lg";
 
   const variants = {
-    primary: "bg-[#D32F2F] text-white hover:bg-[#B71C1C] active:bg-[#A01818]",
-    secondary: "bg-white text-[#D32F2F] border-2 border-[#D32F2F] hover:bg-red-50 active:bg-red-100",
-    outline: "border-2 border-[#D32F2F] text-[#D32F2F] hover:bg-[#D32F2F] hover:text-white active:bg-[#B71C1C] active:border-[#B71C1C]",
+    primary: "bg-primary text-white hover:bg-accent active:bg-primary-active",
+    secondary: "bg-white text-primary border-2 border-primary hover:bg-red-50 active:bg-red-100",
+    outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white active:bg-accent active:border-accent",
   };
 
   if (href) {

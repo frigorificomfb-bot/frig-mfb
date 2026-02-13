@@ -18,14 +18,14 @@ export default function Contato() {
       />
 
       {/* Informações de Contato */}
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <Section style={{ paddingTop: "120px", paddingBottom: "80px" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "32px", marginBottom: "48px" }}>
           <Card
             icon="📍"
             title="Endereço"
             description="Br 010 KM 43 e 44, S/N - Mãe Do Rio - PA, 01234-000"
-            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
-            titleClassName="!text-white"
+            className="!bg-primary ring-0 hover:shadow-lg h-full"
+            titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
           />
 
@@ -33,8 +33,8 @@ export default function Contato() {
             icon="📞"
             title="Telefone"
             description="(91) 3456-7890 | (91) 3456-7891 Seg-Sex: 8h às 18h"
-            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
-            titleClassName="!text-white"
+            className="!bg-primary ring-0 hover:shadow-lg h-full"
+            titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
           />
 
@@ -42,19 +42,19 @@ export default function Contato() {
             icon="📧"
             title="Email"
             description="contato@frigorifico-mfb.com.br | vendas@frigorifico-mfb.com.br"
-            className="!bg-[#D32F2F] ring-0 hover:shadow-lg"
-            titleClassName="!text-white"
+            className="!bg-primary ring-0 hover:shadow-lg h-full"
+            titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
           />
         </div>
       </Section>
 
 
-      <Section className="bg-gray-50">
+      <Section className="bg-gray-50" style={{ padding: "80px 0" }}>
         <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header centralizado (só aqui) */}
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#D32F2F] mb-4">
+          <div className="text-center" style={{ marginBottom: "32px" }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
               Envie sua Mensagem
             </h2>
 
@@ -70,14 +70,14 @@ export default function Contato() {
 
 
       {/* Departamentos */}
-   <Section className="bg-gray-50">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#D32F2F]">
+      <Section className="bg-white" style={{ padding: "80px 0" }}>
+        <div className="text-center" style={{ marginBottom: "40px" }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
             Nossos Departamentos
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: "24px" }}>
           {[
             {
               title: "Vendas",
@@ -102,7 +102,7 @@ export default function Contato() {
           ].map((dept, index) => (
             <div
               key={index}
-              className="p-6 md:p-8 bg-[#D32F2F] text-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
+              className="p-6 md:p-8 bg-primary text-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center h-full"
             >
               <h4 className="text-lg md:text-xl font-bold mb-4">
                 {dept.title}

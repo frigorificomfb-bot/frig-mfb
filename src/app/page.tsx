@@ -31,67 +31,65 @@ export default function Home() {
         subtitle="Construindo o futuro da pecuária"
       />
 
-    <Section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. Primeira Seção (Texto e Imagem) */}
+      <Section className="" style={{ paddingTop: "120px", paddingBottom: "80px" }}>
+        <div className="max-w-[1200px] mx-auto px-6">
           <ImageText
             title="Movidos pela excelência"
             titleClassName="text-3xl md:text-4xl font-bold leading-tight"
             content={`Na essência do Frigorífico MFB está um compromisso inegociável com a excelência. Cada etapa do nosso processo é conduzida com rigor técnico, atenção aos detalhes e profundo respeito pelo cliente. Nossa equipe atua com dedicação constante para entregar soluções cuidadosas e produtos que refletem qualidade superior.
 
       Mais do que produzir carnes, criamos experiências marcadas por confiança, transparência e padrão elevado. Acreditamos que excelência não é um objetivo — é um princípio que orienta cada decisão.`}
-            contentClassName="leading-snug"
+            contentClassName="leading-relaxed"
             buttonText="SAIBA MAIS"
             buttonHref="/sobre-nos"
-            image="/compromisso-com-o-planeta.jpg"
+            image="/equipe-frigorifico.jpeg"
             imagePosition="right"
           />
-          
         </div>
       </Section>
 
 
-     {/* Seção: Nossos Pilares */}
-<Section className="bg-gray-50">
-  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-[#D32F2F] mb-10">
-    EXPLORE NOSSO MUNDO
-  </h2>
+      {/* 2. Seção: Nossos Pilares */}
+      <Section className="bg-gray-50" style={{ padding: "80px 0" }}>
+        <h2 className="text-center text-3xl md:text-4xl font-extrabold text-primary" style={{ marginBottom: "40px" }}>
+          EXPLORE NOSSO MUNDO
+        </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <Card
-      icon="🏆"
-      title="Qualidade Garantida"
-      description="Produzimos carnes de alta qualidade, seguindo rigorosos padrões internacionais de higiene e processamento, garantindo produtos premium para sua mesa."
-      className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
-      titleClassName="!text-white"
-      contentClassName="!text-white/90"
-    />
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "32px" }}>
+          <Card
+            icon="🏆"
+            title="Qualidade Garantida"
+            description="Produzimos carnes de alta qualidade, seguindo rigorosos padrões internacionais de higiene e processamento, garantindo produtos premium para sua mesa."
+            className="!bg-primary !text-white ring-0 hover:shadow-lg h-full"
+            titleClassName="!text-white mb-4"
+            contentClassName="!text-white/90"
+          />
 
-    <Card
-      icon="🔍"
-      title="Rastreabilidade Total"
-      description="Cada produto pode ser rastreado desde a origem do rebanho até o consumidor final, garantindo total transparência e segurança alimentar."
-      className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
-      titleClassName="!text-white"
-      contentClassName="!text-white/90"
-    />
+          <Card
+            icon="🔍"
+            title="Rastreabilidade Total"
+            description="Cada produto pode ser rastreado desde a origem do rebanho até o consumidor final, garantindo total transparência e segurança alimentar."
+            className="!bg-primary !text-white ring-0 hover:shadow-lg h-full"
+            titleClassName="!text-white mb-4"
+            contentClassName="!text-white/90"
+          />
 
-    <Card
-      icon="🌱"
-      title="Sustentabilidade"
-      description="Práticas ambiental e socialmente responsáveis fazem parte do nosso crescimento, priorizando o bem-estar do planeta e das comunidades."
-      className="!bg-[#D32F2F] !text-white ring-0 hover:shadow-lg"
-      titleClassName="!text-white"
-      contentClassName="!text-white/90"
-    />
-  </div>
-</Section>
-
-
+          <Card
+            icon="🌱"
+            title="Sustentabilidade"
+            description="Práticas ambiental e socialmente responsáveis fazem parte do nosso crescimento, priorizando o bem-estar do planeta e das comunidades."
+            className="!bg-primary !text-white ring-0 hover:shadow-lg h-full"
+            titleClassName="!text-white mb-4"
+            contentClassName="!text-white/90"
+          />
+        </div>
+      </Section>
 
 
-      {/* Seção: Estatísticas */}
-      <Section className="bg-white">
-        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#D32F2F] mb-10">
+      {/* 3. Seção: Estatísticas */}
+      <Section className="bg-white" style={{ padding: "80px 0" }}>
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-primary" style={{ marginBottom: "40px" }}>
           SOLUÇÕES FEITAS PARA SUAS NECESSIDADES
         </h2>
 
@@ -106,75 +104,75 @@ export default function Home() {
       </Section>
 
 
-      {/* Seção: Processo */}
-      <Section title="PROCESSO" className="text-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+      {/* 4. Seção: Processo */}
+      <Section title="PROCESSO" className="text-center" style={{ padding: "80px 0" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "32px" }}>
           <ProcessStep
             icon="🐄"
             title="Abate"
             description="Processo humanizado com máximos padrões de bem-estar animal"
-            className="bg-[#D32F2F] text-white"
+            className="bg-primary text-white h-full"
           />
           <ProcessStep
             icon="🔪"
             title="Processamento"
             description="Técnicas modernas de processamento garantindo máxima qualidade"
-            className="bg-[#D32F2F] text-white"
+            className="bg-primary text-white h-full"
           />
           <ProcessStep
             icon="📦"
             title="Comercialização"
             description="Distribuição eficiente com rastreabilidade completa"
-            className="bg-[#D32F2F] text-white"
+            className="bg-primary text-white h-full"
           />
         </div>
       </Section>
 
 
-      {/* Seção: Serviços Numerados */}
-      <Section className="bg-gray-50">
-        <div className="space-y-16 md:space-y-20">
+      {/* 5. Seção: Serviços Numerados */}
+      <Section className="bg-gray-50" style={{ padding: "80px 0" }}>
+        <div className="space-y-[80px]" style={{ display: "flex", flexDirection: "column", gap: "60px" }}>
           <ServiceCard
             number="01"
             title="Qualidade"
             description="Dedicated to providing exceptional service with a focus on quality. Our commitment to excellence drives every decision we make. We believe in creating lasting relationships through personalized attention to detail."
-            image="/qualidade-frig.png"
+            image="/producao-carcacas.jpeg"
           />
           <ServiceCard
             number="02"
             title="Atendimento"
             description="Nosso atendimento especializado busca compreender suas necessidades específicas. Oferecemos suporte técnico completo e orientação profissional em todas as etapas."
             image="/atendimento-frig.jpg"
+            reversed={true}
           />
           <ServiceCard
             number="03"
             title="Processamento"
             description="Utilizamos tecnologia de ponta para garantir processamento eficiente e seguro. Nossa estrutura moderna permite máxima produtividade mantendo qualidade."
-            image="/processamento-frig.jpg"
+            image="/producao-linha-01.jpeg"
           />
           <ServiceCard
             number="04"
             title="Rastreabilidade"
             description="Sistema completo de rastreamento do rebanho ao consumidor final. Transparência total com tecnologia blockchain e código QR para verificação."
-            image="/rastreabilidade-frig.jpg"
+            image="/producao-higienizacao.jpeg"
+            reversed={true}
           />
         </div>
       </Section>
 
-      {/* Seção: Depoimentos */}
-      <Section
-        className="bg-white"
-      >
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#D32F2F]">
+      {/* 6. Seção: Depoimentos */}
+      <Section className="bg-white" style={{ padding: "80px 0" }}>
+        <div className="text-center" style={{ marginBottom: "40px" }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             ATENDIMENTO EXCEPCIONAL
           </h2>
-          <p className="mt-3 text-gray-600 text-base md:text-lg">
+          <p className="text-gray-600 text-lg">
             Ouça da boca de quem confía em nosso trabalho
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "32px" }}>
           <Testimonial
             content="Suporte confiável projetado para fornecer soluções rápidas e eficazes. A qualidade da carne é excepcional."
             author="Cliente Satisfeito"
@@ -203,26 +201,26 @@ export default function Home() {
       </Section>
 
 
-      {/* CTA Final */}
-   <section className="bg-[#D32F2F] text-white w-full flex justify-center py-16">
-      <div className="w-full max-w-7xl px-6 text-center">
+      {/* 7. CTA Final */}
+      <section className="bg-primary text-white w-full flex justify-center" style={{ padding: "80px 0" }}>
+        <div className="w-full max-w-5xl px-6 text-center">
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Quer Conhecer Nossos Produtos?
-        </h2>
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: "30px" }}>
+            Quer Conhecer Nossos Produtos?
+          </h2>
 
-        <p className="text-base md:text-lg mb-8 whitespace-nowrap">
-          Entre em contato conosco para conhecer nossas soluções em qualidade, rastreabilidade e sustentabilidade. Nossa equipe está pronta para ajudar.
-        </p>
+          <p className="text-lg text-white" style={{ marginBottom: "30px" }}>
+            Entre em contato conosco para conhecer nossas soluções em qualidade, rastreabilidade e sustentabilidade.
+          </p>
 
-        <div className="flex justify-center">
-          <Button href="/contato" variant="secondary">
-            Entrar em Contato
-          </Button>
+          <div className="flex justify-center">
+            <Button href="/contato" variant="secondary">
+              Entrar em Contato
+            </Button>
+          </div>
+
         </div>
-
-      </div>
-    </section>
+      </section>
 
     </main>
   );

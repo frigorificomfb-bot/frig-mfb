@@ -20,18 +20,18 @@ export default function SobreNos() {
       />
 
       {/* Nossa História */}
-    <Section className="bg-white">
-      <ImageText
-        title="Nossa Jornada"
-        content="O Frigorífico MFB foi fundado em 1998 com uma visão clara: fornecer carnes de excelente qualidade com total transparência e responsabilidade ambiental. Ao longo de mais de duas décadas, evoluímos desde uma estrutura pequena até nos tornarmos referência no segmento. Cada etapa do crescimento foi marcada pelo comprometimento com qualidade, inovação e sustentabilidade."
-        imagePosition="right"
-        titleClassName="text-center"
-        contentClassName="text-center max-w-4xl mx-auto leading-relaxed"
-      />
-    </Section>
+      <Section className="bg-white" style={{ paddingTop: "120px", paddingBottom: "80px" }}>
+        <ImageText
+          title="Nossa Jornada"
+          content="O Frigorífico MFB foi fundado em 1998 com uma visão clara: fornecer carnes de excelente qualidade com total transparência e responsabilidade ambiental. Ao longo de mais de duas décadas, evoluímos desde uma estrutura pequena até nos tornarmos referência no segmento. Cada etapa do crescimento foi marcada pelo comprometimento com qualidade, inovação e sustentabilidade."
+          imagePosition="right"
+          titleClassName="text-center mb-[40px]"
+          contentClassName="text-center max-w-4xl mx-auto leading-relaxed"
+        />
+      </Section>
 
       {/* Estatísticas */}
-      <Section className="bg-gray-50">
+      <Section className="bg-gray-50" style={{ padding: "80px 0" }}>
         <Stats
           stats={[
             { number: "25+", label: "Anos de Tradição" },
@@ -42,40 +42,65 @@ export default function SobreNos() {
         />
       </Section>
 
+      {/* Vídeo Institucional */}
+      <Section className="bg-white" style={{ padding: "80px 0" }}>
+        <div className="text-center" style={{ marginBottom: "40px" }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">
+            Conheça Nossa Operação
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto mt-4">
+            Veja de perto como funciona nosso processo de produção com tecnologia de ponta e equipe especializada.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{ aspectRatio: "16/9" }}>
+            <video
+              controls
+              className="w-full h-full object-cover"
+              poster="/producao-linha-01.jpeg"
+            >
+              <source src="/video-institucional.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos HTML5.
+            </video>
+          </div>
+        </div>
+      </Section>
+
       {/* Missão Visão Valores */}
-   <Section title="QUEM SOMOS" className="text-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Card
-          title="Nossa Missão"
-          description="Fornecer carnes de excelente qualidade com total transparência, rastreabilidade e compromisso com a sustentabilidade ambiental e social."
-          icon="🎯"
-          className="
-            !bg-[#D32F2F] !text-white ring-0 shadow-lg
+      <Section title="QUEM SOMOS" className="text-center" style={{ padding: "80px 0" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "32px" }}>
+          <Card
+            title="Nossa Missão"
+            description="Fornecer carnes de excelente qualidade com total transparência, rastreabilidade e compromisso com a sustentabilidade ambiental e social."
+            icon="🎯"
+            className="
+            !bg-primary !text-white ring-0 shadow-lg h-full
             [&_h3]:!text-white [&_p]:!text-white/90
           "
-        />
+          />
 
-        <Card
-          title="Nossa Visão"
-          description="Ser a principal referência em qualidade e sustentabilidade no processamento de carnes, reconhecida por excelência operacional e inovação."
-          icon="👁️"
-          className="
-            !bg-[#D32F2F] !text-white ring-0 shadow-lg
+          <Card
+            title="Nossa Visão"
+            description="Ser a principal referência em qualidade e sustentabilidade no processamento de carnes, reconhecida por excelência operacional e inovação."
+            icon="👁️"
+            className="
+            !bg-primary !text-white ring-0 shadow-lg h-full
             [&_h3]:!text-white [&_p]:!text-white/90
           "
-        />
+          />
 
-        <Card
-          title="Nossos Valores"
-          description="Qualidade, Integridade, Sustentabilidade, Inovação, Responsabilidade e Excelência em cada ação e decisão."
-          icon="💎"
-          className="
-            !bg-[#D32F2F] !text-white ring-0 shadow-lg
+          <Card
+            title="Nossos Valores"
+            description="Qualidade, Integridade, Sustentabilidade, Inovação, Responsabilidade e Excelência em cada ação e decisão."
+            icon="💎"
+            className="
+            !bg-primary !text-white ring-0 shadow-lg h-full
             [&_h3]:!text-white [&_p]:!text-white/90
           "
-        />
-      </div>
-    </Section>
+          />
+        </div>
+      </Section>
 
 
 
@@ -83,8 +108,9 @@ export default function SobreNos() {
       <Section
         title="DIFERENCIAIS"
         className="bg-gray-50 text-center"
+        style={{ padding: "80px 0" }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-8" style={{ gap: "32px" }}>
           {[
             {
               icon: "📋",
@@ -115,7 +141,7 @@ export default function SobreNos() {
               key={index}
               {...item}
               className="
-                !bg-[#D32F2F] !text-white ring-0 shadow-lg
+                !bg-primary !text-white ring-0 shadow-lg h-full
                 [&_h3]:!text-white
                 [&_p]:!text-white/90
               "
@@ -126,10 +152,10 @@ export default function SobreNos() {
 
 
       {/* Compromisso Final */}
-      <section className="bg-[#D32F2F] text-white w-full flex justify-center py-16 md:py-20">
+      <section className="bg-primary text-white w-full flex justify-center" style={{ padding: "80px 0" }}>
         <div className="w-full max-w-4xl px-6 text-center">
-          
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight" style={{ marginBottom: "40px" }}>
             Nosso Compromisso
           </h2>
 

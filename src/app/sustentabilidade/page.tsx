@@ -20,30 +20,31 @@ export default function Sustentabilidade() {
       />
 
       {/* Introdução */}
-      <Section>
+      <Section style={{ paddingTop: "120px", paddingBottom: "80px" }}>
         <ImageText
           title="Compromisso com o Planeta"
-          content="A sustentabilidade não é apenas um programa..."
-          image="/compromisso-com-o-planeta.jpg"
+          content="A sustentabilidade não é apenas um programa, é parte do nosso DNA. Acreditamos que é possível produzir alimentos de alta qualidade em harmonia com o meio ambiente e com a sociedade."
+          image="/equipe-frigorifico.jpeg"
           imagePosition="right"
+          titleClassName="mb-[40px]"
         />
       </Section>
 
-   {/* Pilares de Sustentabilidade */}
-<Section className="bg-gray-50">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#D32F2F]">
+      {/* Pilares de Sustentabilidade */}
+      <Section className="bg-gray-50" style={{ padding: "80px 0" }}>
+        <div className="text-center" style={{ marginBottom: "40px" }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">
             Nossos Pilares
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "32px" }}>
           <Card
             icon={<span className="text-4xl">🌍</span>}
             title="Meio Ambiente"
             description="Redução de emissões de carbono, gestão sustentável de resíduos e uso eficiente de recursos naturais."
-            className="!bg-[#D32F2F] ring-0 hover:shadow-xl transition-all duration-300"
-            titleClassName="!text-white"
+            className="!bg-primary ring-0 hover:shadow-xl transition-all duration-300 h-full"
+            titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
           />
 
@@ -51,8 +52,8 @@ export default function Sustentabilidade() {
             icon={<span className="text-4xl">👥</span>}
             title="Responsabilidade Social"
             description="Programas comunitários, apoio à agricultura sustentável e compromisso com o bem-estar dos colaboradores."
-            className="!bg-[#D32F2F] ring-0 hover:shadow-xl transition-all duration-300"
-            titleClassName="!text-white"
+            className="!bg-primary ring-0 hover:shadow-xl transition-all duration-300 h-full"
+            titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
           />
 
@@ -60,15 +61,16 @@ export default function Sustentabilidade() {
             icon={<span className="text-4xl">🔬</span>}
             title="Inovação Responsável"
             description="Investimento em tecnologias limpas e práticas inovadoras que reduzem o impacto ambiental."
-            className="!bg-[#D32F2F] ring-0 hover:shadow-xl transition-all duration-300"
-            titleClassName="!text-white"
+            className="!bg-primary ring-0 hover:shadow-xl transition-all duration-300 h-full"
+            titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
           />
         </div>
       </Section>
 
       {/* Iniciativas */}
-      <Section title="Nossas Iniciativas">
+      <Section title="Nossas Iniciativas" style={{ padding: "80px 0" }}>
+        {/* Title prop in Section handles mb-40px inside Section component logic (via style, as standardized) */}
         {[
           {
             title: "Programa de Reuso de Água",
@@ -91,8 +93,8 @@ export default function Sustentabilidade() {
               "Programa de capacitação para agricultores familiares focando em práticas sustentáveis.",
           },
         ].map((initiative, index) => (
-          <div key={index} className="mb-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#D32F2F] mb-3">
+          <div key={index} style={{ marginBottom: "32px" }}>
+            <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3">
               {initiative.title}
             </h3>
             <p className="text-sm sm:text-base text-black leading-relaxed md:leading-loose">
@@ -103,18 +105,18 @@ export default function Sustentabilidade() {
       </Section>
 
       {/* Metas e Compromissos */}
-      <Section className="bg-[#D32F2F] text-white">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-white">Nossas Metas</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Section className="bg-primary text-white" style={{ padding: "80px 0" }}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white" style={{ marginBottom: "40px" }}>Nossas Metas</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "32px" }}>
           {[
             "Reduzir emissões de carbono em 50% até 2030",
             "Alcançar zero resíduo em aterro até 2028",
             "Aumentar uso de energia renovável para 60% até 2032",
             "100% de rastreabilidade com práticas sustentáveis",
           ].map((meta, index) => (
-            <div key={index} className="flex gap-4">
-              <div className="text-3xl">✓</div>
-              <div className="text-white">{meta}</div>
+            <div key={index} className="flex gap-4 items-center">
+              <div className="text-3xl font-bold">✓</div>
+              <div className="text-white text-lg">{meta}</div>
             </div>
           ))}
         </div>

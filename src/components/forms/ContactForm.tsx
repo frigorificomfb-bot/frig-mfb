@@ -95,7 +95,7 @@ export default function ContactForm() {
 
       {/* Nome */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
           Nome Completo *
         </label>
         <input
@@ -108,8 +108,8 @@ export default function ContactForm() {
             w-full px-3 sm:px-4 py-2 sm:py-3
             text-sm sm:text-base text-center
             border border-gray-300 rounded-lg
-            focus:outline-none focus:border-[#D32F2F]
-            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            focus:outline-none focus:border-primary
+            focus:ring-2 focus:ring-primary focus:ring-opacity-20
             transition-colors
           "
           placeholder="Seu nome"
@@ -118,7 +118,7 @@ export default function ContactForm() {
 
       {/* Email */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
           Email *
         </label>
         <input
@@ -131,8 +131,8 @@ export default function ContactForm() {
             w-full px-3 sm:px-4 py-2 sm:py-3
             text-sm sm:text-base text-center
             border border-gray-300 rounded-lg
-            focus:outline-none focus:border-[#D32F2F]
-            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            focus:outline-none focus:border-primary
+            focus:ring-2 focus:ring-primary focus:ring-opacity-20
             transition-colors
           "
           placeholder="seu.email@exemplo.com"
@@ -141,7 +141,7 @@ export default function ContactForm() {
 
       {/* Telefone */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
           Telefone
         </label>
         <input
@@ -153,8 +153,8 @@ export default function ContactForm() {
             w-full px-3 sm:px-4 py-2 sm:py-3
             text-sm sm:text-base text-center
             border border-gray-300 rounded-lg
-            focus:outline-none focus:border-[#D32F2F]
-            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            focus:outline-none focus:border-primary
+            focus:ring-2 focus:ring-primary focus:ring-opacity-20
             transition-colors
           "
           placeholder="(XX) XXXX-XXXX"
@@ -163,7 +163,7 @@ export default function ContactForm() {
 
       {/* Empresa */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
           Empresa/Organização
         </label>
         <input
@@ -175,8 +175,8 @@ export default function ContactForm() {
             w-full px-3 sm:px-4 py-2 sm:py-3
             text-sm sm:text-base text-center
             border border-gray-300 rounded-lg
-            focus:outline-none focus:border-[#D32F2F]
-            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            focus:outline-none focus:border-primary
+            focus:ring-2 focus:ring-primary focus:ring-opacity-20
             transition-colors
           "
           placeholder="Sua empresa"
@@ -185,7 +185,7 @@ export default function ContactForm() {
 
       {/* Assunto */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
           Assunto *
         </label>
         <select
@@ -197,8 +197,8 @@ export default function ContactForm() {
             w-full px-3 sm:px-4 py-2 sm:py-3
             text-sm sm:text-base text-center
             border border-gray-300 rounded-lg
-            focus:outline-none focus:border-[#D32F2F]
-            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            focus:outline-none focus:border-primary
+            focus:ring-2 focus:ring-primary focus:ring-opacity-20
             transition-colors
           "
         >
@@ -213,7 +213,7 @@ export default function ContactForm() {
 
       {/* Mensagem */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-[#D32F2F] mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
           Mensagem *
         </label>
         <textarea
@@ -226,8 +226,8 @@ export default function ContactForm() {
             w-full px-3 sm:px-4 py-2 sm:py-3
             text-sm sm:text-base text-center
             border border-gray-300 rounded-lg
-            focus:outline-none focus:border-[#D32F2F]
-            focus:ring-2 focus:ring-[#D32F2F] focus:ring-opacity-20
+            focus:outline-none focus:border-primary
+            focus:ring-2 focus:ring-primary focus:ring-opacity-20
             resize-none transition-colors
           "
           placeholder="Sua mensagem..."
@@ -242,8 +242,8 @@ export default function ContactForm() {
           className="
             w-full px-4 sm:px-6 py-2 sm:py-3
             text-sm sm:text-base
-            bg-[#D32F2F] text-white font-semibold rounded-lg
-            hover:bg-[#B71C1C] active:bg-[#A01818]
+            bg-primary text-white font-semibold rounded-lg
+            hover:bg-accent active:bg-primary-active
             disabled:opacity-50 disabled:cursor-not-allowed
             transition-colors duration-200
           "

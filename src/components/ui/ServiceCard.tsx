@@ -3,6 +3,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   image?: string;
+  reversed?: boolean;
 }
 
 export default function ServiceCard({
@@ -10,12 +11,13 @@ export default function ServiceCard({
   title,
   description,
   image,
+  reversed = false,
 }: ServiceCardProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-      
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+
       {/* Image */}
-      <div className="flex justify-center">
+      <div className={`flex justify-center ${reversed ? "md:order-last" : ""}`}>
         <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
           {image ? (
             <img
@@ -33,11 +35,11 @@ export default function ServiceCard({
 
       {/* Content */}
       <div className="max-w-xl">
-        <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#D32F2F]/20 leading-none">
+        <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary/20 leading-none">
           {number}
         </div>
 
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#D32F2F] mt-2 mb-4">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mt-2 mb-4">
           {title}
         </h3>
 

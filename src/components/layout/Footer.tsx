@@ -5,14 +5,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-white w-screen flex justify-center">
+    <footer className="border-t bg-white w-full flex justify-center">
       <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8 border-b border-gray-200">
           {/* Logo & Social */}
           <div>
             <div className="mb-4 sm:mb-6">
-              <h3 className="font-bold text-base sm:text-lg text-[#D32F2F]">
+              <h3 className="font-bold text-base sm:text-lg text-primary">
                 Frigorífico MFB
               </h3>
             </div>
@@ -26,7 +26,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D32F2F] hover:text-[#B71C1C] hover:scale-110 transition-all duration-200"
+                className="text-primary hover:text-accent hover:scale-110 transition-all duration-200"
                 title="Instagram"
               >
                 <FaInstagram />
@@ -36,7 +36,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D32F2F] hover:text-[#B71C1C] hover:scale-110 transition-all duration-200"
+                className="text-primary hover:text-accent hover:scale-110 transition-all duration-200"
                 title="Facebook"
               >
                 <FaFacebookF />
@@ -46,7 +46,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D32F2F] hover:text-[#B71C1C] hover:scale-110 transition-all duration-200"
+                className="text-primary hover:text-accent hover:scale-110 transition-all duration-200"
                 title="LinkedIn"
               >
                 <FaLinkedinIn />
@@ -56,14 +56,14 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h4 className="font-semibold text-[#D32F2F] mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
+            <h4 className="font-semibold text-primary mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
               Contato
             </h4>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-black">
               <li>
                 <a
                   href="tel:+551134567890"
-                  className="hover:text-[#D32F2F] transition-colors font-medium"
+                  className="hover:text-primary transition-colors font-medium"
                 >
                   Telefone
                 </a>
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:contato@frigorifico-mfb.com.br"
-                  className="hover:text-[#D32F2F] transition-colors font-medium"
+                  className="hover:text-primary transition-colors font-medium"
                 >
                   Email
                 </a>
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Localização */}
           <div>
-            <h4 className="font-semibold text-[#D32F2F] mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
+            <h4 className="font-semibold text-primary mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
               Localização
             </h4>
             <p className="text-xs sm:text-sm text-black leading-relaxed">
@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Informações Gerais & Colaboração */}
           <div>
-            <h4 className="font-semibold text-[#D32F2F] mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
+            <h4 className="font-semibold text-primary mb-3 sm:mb-4 uppercase text-xs sm:text-sm">
               Informações Gerais
             </h4>
 
@@ -110,7 +110,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/sobre-nos"
-                  className="hover:text-[#D32F2F] transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Sobre Nós
                 </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/rastreabilidade"
-                  className="hover:text-[#D32F2F] transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Rastreabilidade
                 </Link>
@@ -126,14 +126,14 @@ export default function Footer() {
               <li>
                 <Link
                   href="/sustentabilidade"
-                  className="hover:text-[#D32F2F] transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Sustentabilidade
                 </Link>
               </li>
             </ul>
 
-            <h4 className="font-semibold text-[#D32F2F] mb-2 uppercase text-xs sm:text-sm">
+            <h4 className="font-semibold text-primary mb-2 uppercase text-xs sm:text-sm">
               Colaboração
             </h4>
             <p className="text-xs sm:text-sm text-black">
