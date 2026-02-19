@@ -23,7 +23,7 @@ export default function Footer() {
 
             <div className="flex gap-4 text-xl">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/frigorifico_mfb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-accent hover:scale-110 transition-all duration-200"
@@ -33,7 +33,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://facebook.com"
+                href="https://www.instagram.com/frigorifico_mfb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-accent hover:scale-110 transition-all duration-200"
@@ -43,7 +43,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.instagram.com/frigorifico_mfb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-accent hover:scale-110 transition-all duration-200"
@@ -67,18 +67,18 @@ export default function Footer() {
                 >
                   Telefone
                 </a>
-                <p className="text-xs sm:text-sm">(11) 3456-7890</p>
+                <p className="text-xs sm:text-sm">(91) 3444-1615</p>
               </li>
 
               <li>
                 <a
-                  href="mailto:contato@frigorifico-mfb.com.br"
+                  href="mailto:ruthehelena@hotmail.com"
                   className="hover:text-primary transition-colors font-medium"
                 >
                   Email
                 </a>
                 <p className="break-all text-xs">
-                  contato@frigorifico-mfb.com.br
+                  ruthehelena@hotmail.com
                 </p>
               </li>
             </ul>
@@ -90,13 +90,13 @@ export default function Footer() {
               Localização
             </h4>
             <p className="text-xs sm:text-sm text-black leading-relaxed">
-              Av. Industrial, 1000
+              Rodovia BR 010, KM 43 e 44, S/N
               <br />
-              Distrito Industrial
+              Estrada
               <br />
-              São Paulo - SP
+              Mãe do Rio - PA
               <br />
-              01234-567
+              68675-000
             </p>
           </div>
 
@@ -146,9 +146,6 @@ export default function Footer() {
         <div className="py-4 sm:py-6 text-center border-t border-gray-200">
           <p className="text-xs sm:text-sm text-black mb-1">
             © {currentYear} Frigorífico MFB. Todos os direitos reservados.
-          </p>
-          <p className="text-xs text-black">
-            Qualidade, Rastreabilidade e Sustentabilidade
           </p>
         </div>
       </div>

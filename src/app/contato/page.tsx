@@ -23,7 +23,7 @@ export default function Contato() {
           <Card
             icon="📍"
             title="Endereço"
-            description="Br 010 KM 43 e 44, S/N - Mãe Do Rio - PA, 01234-000"
+            description="Rodovia BR 010, KM 43 e 44, S/N - Mãe do Rio - PA, 68675-000"
             className="!bg-primary ring-0 hover:shadow-lg h-full"
             titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
@@ -32,7 +32,7 @@ export default function Contato() {
           <Card
             icon="📞"
             title="Telefone"
-            description="(91) 3456-7890 | (91) 3456-7891 Seg-Sex: 8h às 18h"
+            description="(91) 3444-1615 | Seg-Sex: 8h às 18h"
             className="!bg-primary ring-0 hover:shadow-lg h-full"
             titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
@@ -41,7 +41,7 @@ export default function Contato() {
           <Card
             icon="📧"
             title="Email"
-            description="contato@frigorifico-mfb.com.br | vendas@frigorifico-mfb.com.br"
+            description="ruthehelena@hotmail.com"
             className="!bg-primary ring-0 hover:shadow-lg h-full"
             titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
@@ -81,23 +81,23 @@ export default function Contato() {
           {[
             {
               title: "Vendas",
-              email: "vendas@frigorifico-mfb.com.br",
-              phone: "(11) 3456-7890",
+              email: "ruthehelena@hotmail.com",
+              phone: "(91) 3444-1615",
             },
             {
               title: "Rastreabilidade",
-              email: "rastreabilidade@frigorifico-mfb.com.br",
-              phone: "(11) 3456-7891",
+              email: "ruthehelena@hotmail.com",
+              phone: "(91) 3444-1615",
             },
             {
               title: "Sustentabilidade",
-              email: "sustentabilidade@frigorifico-mfb.com.br",
-              phone: "(11) 3456-7892",
+              email: "ruthehelena@hotmail.com",
+              phone: "(91) 3444-1615",
             },
             {
               title: "Suporte Técnico",
-              email: "suporte@frigorifico-mfb.com.br",
-              phone: "(11) 3456-7893",
+              email: "ruthehelena@hotmail.com",
+              phone: "(91) 3444-1615",
             },
           ].map((dept, index) => (
             <div

@@ -95,7 +95,7 @@ export default function ContactForm() {
 
       {/* Nome */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-left">
           Nome Completo *
         </label>
         <input
@@ -106,7 +106,7 @@ export default function ContactForm() {
           required
           className="
             w-full px-3 sm:px-4 py-2 sm:py-3
-            text-sm sm:text-base text-center
+            text-sm sm:text-base text-left
             border border-gray-300 rounded-lg
             focus:outline-none focus:border-primary
             focus:ring-2 focus:ring-primary focus:ring-opacity-20
@@ -118,7 +118,7 @@ export default function ContactForm() {
 
       {/* Email */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-left">
           Email *
         </label>
         <input
@@ -129,7 +129,7 @@ export default function ContactForm() {
           required
           className="
             w-full px-3 sm:px-4 py-2 sm:py-3
-            text-sm sm:text-base text-center
+            text-sm sm:text-base text-left
             border border-gray-300 rounded-lg
             focus:outline-none focus:border-primary
             focus:ring-2 focus:ring-primary focus:ring-opacity-20
@@ -141,7 +141,7 @@ export default function ContactForm() {
 
       {/* Telefone */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-left">
           Telefone
         </label>
         <input
@@ -151,7 +151,7 @@ export default function ContactForm() {
           onChange={handleChange}
           className="
             w-full px-3 sm:px-4 py-2 sm:py-3
-            text-sm sm:text-base text-center
+            text-sm sm:text-base text-left
             border border-gray-300 rounded-lg
             focus:outline-none focus:border-primary
             focus:ring-2 focus:ring-primary focus:ring-opacity-20
@@ -163,7 +163,7 @@ export default function ContactForm() {
 
       {/* Empresa */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-left">
           Empresa/Organização
         </label>
         <input
@@ -173,7 +173,7 @@ export default function ContactForm() {
           onChange={handleChange}
           className="
             w-full px-3 sm:px-4 py-2 sm:py-3
-            text-sm sm:text-base text-center
+            text-sm sm:text-base text-left
             border border-gray-300 rounded-lg
             focus:outline-none focus:border-primary
             focus:ring-2 focus:ring-primary focus:ring-opacity-20
@@ -185,7 +185,7 @@ export default function ContactForm() {
 
       {/* Assunto */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-left">
           Assunto *
         </label>
         <select
@@ -195,7 +195,7 @@ export default function ContactForm() {
           required
           className="
             w-full px-3 sm:px-4 py-2 sm:py-3
-            text-sm sm:text-base text-center
+            text-sm sm:text-base text-left
             border border-gray-300 rounded-lg
             focus:outline-none focus:border-primary
             focus:ring-2 focus:ring-primary focus:ring-opacity-20
@@ -213,7 +213,7 @@ export default function ContactForm() {
 
       {/* Mensagem */}
       <div className="w-full">
-        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-center">
+        <label className="block text-xs sm:text-sm font-semibold text-primary mb-2 md:mb-3 text-left">
           Mensagem *
         </label>
         <textarea
@@ -224,7 +224,7 @@ export default function ContactForm() {
           rows={6}
           className="
             w-full px-3 sm:px-4 py-2 sm:py-3
-            text-sm sm:text-base text-center
+            text-sm sm:text-base text-left
             border border-gray-300 rounded-lg
             focus:outline-none focus:border-primary
             focus:ring-2 focus:ring-primary focus:ring-opacity-20
