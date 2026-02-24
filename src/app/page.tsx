@@ -135,14 +135,14 @@ export default function Home() {
           <ServiceCard
             number="01"
             title="Qualidade"
-            description="Dedicated to providing exceptional service with a focus on quality. Our commitment to excellence drives every decision we make. We believe in creating lasting relationships through personalized attention to detail."
+            description="Nos dedicamos a prestar um serviço excepcional com foco na qualidade. O nosso compromisso com a excelência orienta todas as nossas decisões. Acreditamos na criação de relações duradouras através de uma atenção personalizada aos detalhes."
             image="/producao-carcacas.jpeg"
           />
           <ServiceCard
             number="02"
             title="Atendimento"
             description="Nosso atendimento especializado busca compreender suas necessidades específicas. Oferecemos suporte técnico completo e orientação profissional em todas as etapas."
-            image="/atendimento-frig.jpg"
+            image="/atendimento-frig.png"
             reversed={true}
           />
           <ServiceCard
