@@ -243,41 +243,59 @@ As especificações técnicas são definidas formalmente para orientar os padrõ
         </div>
       </Section>
 
-      {/* Formato de Resposta */}
-      <Section className="bg-white" style={{ padding: "80px 0" }}>
-        <ImageText
-          title="Formato de Resposta e Anexos"
-          content={`As informações podem ser organizadas em relatório escrito, preferencialmente em Word ou PDF, conforme as seções apresentadas nesta página.
+{/* Formato de Resposta */}
+<Section className="bg-white" style={{ padding: "80px 0" }}>
+  <div className="flex justify-center">
+    <div className="max-w-3xl text-center px-6">
 
-Como anexos, podem ser incluídos certificados, procedimentos, laudos de análise, especificações técnicas, imagens, fotos e registros de monitoramento, sempre que disponíveis.`}
-          image="/producao-higienizacao.jpeg"
-          imagePosition="right"
-          titleClassName="text-3xl md:text-4xl font-bold leading-tight"
-          contentClassName="leading-relaxed"
-        />
-      </Section>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+        Formato de Resposta e Anexos
+      </h2>
+
+      <p className="text-lg leading-relaxed text-gray-700">
+        As informações podem ser organizadas em relatório escrito,
+        preferencialmente em Word ou PDF, conforme as seções
+        apresentadas nesta página.
+      </p>
+
+      <p className="text-lg leading-relaxed text-gray-700 mt-4">
+        Como anexos, podem ser incluídos certificados, procedimentos,
+        laudos de análise, especificações técnicas, imagens, fotos
+        e registros de monitoramento, sempre que disponíveis.
+      </p>
+
+    </div>
+  </div>
+</Section>
 
       {/* Contato */}
-      <Section title="CONTATO PARA ESCLARECIMENTOS" className="text-center" style={{ padding: "80px 0" }}>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2" style={{ gap: "32px" }}>
-          <Card
+        <Section
+        title="CONTATO PARA ESCLARECIMENTOS"
+        className="text-center"
+        style={{ padding: "80px 0" }}
+        >
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl justify-center">
+
+            <Card
             icon="👤"
             title="Responsável"
             description="Nome, cargo, e-mail e telefone/WhatsApp podem ser informados nesta seção para facilitar o contato e eventuais esclarecimentos adicionais."
-            className="!bg-primary !text-white ring-0 shadow-lg h-full"
+            className="!bg-primary !text-white ring-0 shadow-lg h-full text-center"
             titleClassName="!text-white"
             contentClassName="!text-white/90"
-          />
-          <Card
+            />
+
+            <Card
             icon="🔒"
             title="Confidencialidade"
             description="As informações fornecidas serão tratadas com confidencialidade e utilizadas exclusivamente para avaliação de qualidade e fortalecimento da parceria comercial."
-            className="!bg-primary !text-white ring-0 shadow-lg h-full"
+            className="!bg-primary !text-white ring-0 shadow-lg h-full text-center"
             titleClassName="!text-white"
             contentClassName="!text-white/90"
-          />
+            />
+
         </div>
-      </Section>
+        </Section>
 
       {/* CTA Final */}
       <section
