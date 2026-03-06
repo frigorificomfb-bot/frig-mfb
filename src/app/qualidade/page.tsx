@@ -139,7 +139,7 @@ Nosso objetivo é apresentar, de forma clara e organizada, como conduzimos a ges
           content={`O controle de qualidade da carne considera parâmetros fundamentais como pH, cor, temperatura, textura, rendimento e demais critérios técnicos relevantes para cada produto ou corte.
 
 As especificações técnicas são definidas formalmente para orientar os padrões de aceitação e rejeição de lotes, assegurando consistência, segurança e conformidade em todas as etapas do processo.`}
-          image="/producao-carcacas.jpeg"
+          image="/qualidade-carne.jpeg"
           imagePosition="left"
           titleClassName="text-3xl md:text-4xl font-bold leading-tight"
           contentClassName="leading-relaxed"
