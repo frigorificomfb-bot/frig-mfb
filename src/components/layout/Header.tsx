@@ -18,6 +18,8 @@ export default function Header() {
     { href: "/sustentabilidade", label: "Sustentabilidade" },
     { href: "/rastreabilidade", label: "Rastreabilidade" },
     { href: "/contato", label: "Contato" },
+    { href: "/qualidade", label: "Qualidade" },
+    
   ];
 
   return (
