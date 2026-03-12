@@ -1,8 +1,8 @@
 interface TestimonialProps {
   content: string;
-  author: string;
-  role: string;
-  location: string;
+  author?: string;
+  role?: string;
+  location?: string;
   image?: string;
 }
 
@@ -19,19 +19,27 @@ export default function Testimonial({
         "{content}"
       </p>
 
-      <div className="space-y-1">
-        <h4 className="text-lg md:text-xl font-bold">
-          {author}
-        </h4>
+      {(author || role || location) && (
+        <div className="space-y-1">
+          {author && (
+            <h4 className="text-lg md:text-xl font-bold">
+              {author}
+            </h4>
+          )}
 
-        <p className="text-white/80 text-sm">
-          {role}
-        </p>
+          {role && (
+            <p className="text-white/80 text-sm">
+              {role}
+            </p>
+          )}
 
-        <p className="text-white/70 text-sm">
-          {location}
-        </p>
-      </div>
+          {location && (
+            <p className="text-white/70 text-sm">
+              {location}
+            </p>
+          )}
+        </div>
+      )}
 
     </div>
   );

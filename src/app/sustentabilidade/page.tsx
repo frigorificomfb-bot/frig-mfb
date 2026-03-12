@@ -279,7 +279,7 @@ export default function Sustentabilidade() {
             },
             {
               org: "Vigilância Sanitária",
-              name: "Municipal / Estadual",
+              name: "Municipal",
               items: [
                 "Licença sanitária",
                 "Fiscalização de condições higiênico-sanitárias",

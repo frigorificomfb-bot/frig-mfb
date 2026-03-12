@@ -16,6 +16,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/sobre-nos", label: "Sobre Nós" },
     { href: "/sustentabilidade", label: "Sustentabilidade" },
+    { href: "/qualidade-do-produto", label: "Qualidade do Produto" },
     { href: "/rastreabilidade", label: "Rastreabilidade" },
     { href: "/contato", label: "Contato" },
   ];

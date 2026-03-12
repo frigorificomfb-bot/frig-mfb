@@ -23,7 +23,7 @@ export default function SobreNos() {
       <Section className="bg-white" style={{ paddingTop: "120px", paddingBottom: "80px" }}>
         <ImageText
           title="Nossa Jornada"
-          content="O Frigorífico MFB foi fundado em 1998 com uma visão clara: fornecer carnes de excelente qualidade com total transparência e responsabilidade ambiental. Ao longo de mais de duas décadas, evoluímos desde uma estrutura pequena até nos tornarmos referência no segmento. Cada etapa do crescimento foi marcada pelo comprometimento com qualidade, inovação e sustentabilidade."
+          content="O Frigorífico MFB foi fundado com uma visão clara: fornecer carnes de excelente qualidade com total transparência e responsabilidade ambiental. Ao longo de mais de duas décadas, evoluímos desde uma estrutura pequena até nos tornarmos referência no segmento. Cada etapa do crescimento foi marcada pelo comprometimento com qualidade, inovação e sustentabilidade."
           imagePosition="right"
           titleClassName="text-center mb-[40px]"
           contentClassName="text-center max-w-4xl mx-auto leading-relaxed"
@@ -34,35 +34,37 @@ export default function SobreNos() {
       <Section className="bg-gray-50" style={{ padding: "80px 0" }}>
         <Stats
           stats={[
-            { number: "25+", label: "Anos de Tradição" },
-            { number: "500+", label: "Clientes Atendidos" },
+            { number: "10+", label: "Anos de Tradição" },
+            { number: "5000+", label: "Clientes Atendidos" },
             { number: "1000+", label: "Toneladas/Ano" },
-            { number: "100%", label: "Rastreabilidade" },
+            { number: "98%", label: "Satisfação do Cliente" },
           ]}
         />
       </Section>
 
       {/* Vídeo Institucional */}
       <Section className="bg-white" style={{ padding: "80px 0" }}>
-        <div className="text-center" style={{ marginBottom: "40px" }}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">
-            Conheça Nossa Operação
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto mt-4">
-            Veja de perto como funciona nosso processo de produção com tecnologia de ponta e equipe especializada.
-          </p>
-        </div>
+        <div className="w-full flex flex-col items-center justify-center text-center">
+          <div style={{ marginBottom: "40px" }} className="flex flex-col items-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary w-full text-center">
+              Conheça Nossa Operação
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto mt-4 leading-relaxed text-center">
+              Veja de perto como funciona nosso processo de produção com tecnologia de ponta e equipe especializada.
+            </p>
+          </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{ aspectRatio: "16/9" }}>
-            <video
-              controls
-              className="w-full h-full object-cover"
-              poster="/producao-linha-01.jpeg"
-            >
-              <source src="/video-institucional.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeos HTML5.
-            </video>
+          <div className="w-full max-w-4xl mx-auto">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{ aspectRatio: "16/9" }}>
+              <video
+                controls
+                className="w-full h-full object-cover bg-black"
+                poster="/producao-linha-01.jpeg"
+              >
+                <source src="/video-institucional.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos HTML5.
+              </video>
+            </div>
           </div>
         </div>
       </Section>

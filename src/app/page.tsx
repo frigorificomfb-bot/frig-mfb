@@ -95,9 +95,9 @@ export default function Home() {
 
         <Stats
           stats={[
-            { number: "500+", label: "Cabeças por Mês" },
-            { number: "100%", label: "Rastreabilidade" },
-            { number: "25+", label: "Anos de Experiência" },
+            { number: "5000+", label: "Cabeças por Mês" },
+            { number: "100%", label: "Qualidade do Produto" },
+            { number: "10+", label: "Anos de Experiência" },
             { number: "98%", label: "Satisfação do Cliente" },
           ]}
         />
@@ -154,7 +154,7 @@ export default function Home() {
           <ServiceCard
             number="04"
             title="Rastreabilidade"
-            description="Sistema completo de rastreamento do rebanho ao consumidor final. Transparência total com tecnologia blockchain e código QR para verificação."
+            description="Sistema completo de rastreamento do rebanho ao consumidor final. Transparência total para verificação."
             image="/producao-higienizacao.jpeg"
             reversed={true}
           />
@@ -175,27 +175,15 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "32px" }}>
           <Testimonial
             content="Suporte confiável projetado para fornecer soluções rápidas e eficazes. A qualidade da carne é excepcional."
-            author="Cliente Satisfeito"
-            role="Distribuidor"
-            location="Mato Grosso"
           />
           <Testimonial
             content="Serviços inovadores que trazem qualidade e rastreabilidade para a nossa mesa. Recomendo muito!"
-            author="Parceiro Comercial"
-            role="Supermercado"
-            location="Brasil"
           />
           <Testimonial
             content="A rastreabilidade é excelente, nossos clientes confiam muito nos produtos. Ótima parceria!"
-            author="Varejista"
-            role="Boutique de Carnes"
-            location="São Paulo"
           />
           <Testimonial
             content="Profissional, comprometido e com máxima qualidade. Frigorífico MFB é referência no mercado."
-            author="Restaurante Premium"
-            role="Chefe de Cozinha"
-            location="Minas Gerais"
           />
         </div>
       </Section>

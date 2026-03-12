@@ -96,26 +96,8 @@ export default function Rastreabilidade() {
         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "32px" }}>
           <Card
             icon="📡"
-            title="Sistema GPS e IoT"
-            description="Dispositivos de rastreamento em tempo real durante transporte e armazenamento."
-            className="!bg-primary ring-0 hover:shadow-lg h-full"
-            titleClassName="!text-white mb-4"
-            contentClassName="!text-white/90"
-          />
-
-          <Card
-            icon="🔐"
-            title="Blockchain"
-            description="Registro imutável de toda cadeia de produção garantindo integridade dos dados."
-            className="!bg-primary ring-0 hover:shadow-lg h-full"
-            titleClassName="!text-white mb-4"
-            contentClassName="!text-white/90"
-          />
-
-          <Card
-            icon="📱"
-            title="Código QR"
-            description="Consumidor pode escanear e acessar histórico completo do produto."
+            title="Qualidade do produto"
+            description="Responsável Tecnico especializado em qualidade do produto."
             className="!bg-primary ring-0 hover:shadow-lg h-full"
             titleClassName="!text-white mb-4"
             contentClassName="!text-white/90"
@@ -131,7 +113,6 @@ export default function Rastreabilidade() {
           />
         </div>
       </Section>
-
 
       {/* Conformidade */}
       <Section className="bg-primary text-white" style={{ padding: "80px 0" }}>
