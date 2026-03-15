@@ -131,6 +131,14 @@ export default function Footer() {
                   Sustentabilidade
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/qualidade-do-produto"
+                  className="hover:text-primary transition-colors"
+                >
+                  Qualidade do Produto
+                </Link>
+              </li>
             </ul>
 
             <h4 className="font-semibold text-primary mb-2 uppercase text-xs sm:text-sm">
