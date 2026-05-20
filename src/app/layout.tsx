@@ -34,23 +34,30 @@ export const metadata: Metadata = {
     "max-video-preview": -1,
   },
   openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "https://www.frigorifico-mfb.com.br",
-    title: "Frigorífico MFB | Qualidade, Rastreabilidade e Sustentabilidade",
-    description:
-      "Frigorífico MFB oferece carnes de alta qualidade com rastreabilidade completa e compromisso com sustentabilidade ambiental.",
-    siteName: "Frigorífico MFB",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Frigorífico MFB",
-    description:
-      "Qualidade, Rastreabilidade e Sustentabilidade em Cada Produto",
-  },
-  alternates: {
-    canonical: "https://www.frigorifico-mfb.com.br",
-  },
+  type: "website",
+  locale: "pt_BR",
+  url: "https://www.frigorifico-mfb.com.br/logomfb.png",
+  title: "Frigorífico MFB | Qualidade, Rastreabilidade e Sustentabilidade",
+  description:
+    "Frigorífico MFB oferece carnes de alta qualidade com rastreabilidade completa e compromisso com sustentabilidade ambiental.",
+  siteName: "Frigorífico MFB",
+  images: [
+    {
+      url: "/logomfb.png", // arquivo dentro da pasta public
+      width: 1200,
+      height: 630,
+      alt: "Frigorífico MFB",
+    },
+  ],
+},
+
+twitter: {
+  card: "summary_large_image",
+  title: "Frigorífico MFB",
+  description:
+    "Qualidade, Rastreabilidade e Sustentabilidade em Cada Produto",
+  images: ["https://www.frigorifico-mfb.com.br/logomfb.png"],
+},
 };
 
 export default function RootLayout({
