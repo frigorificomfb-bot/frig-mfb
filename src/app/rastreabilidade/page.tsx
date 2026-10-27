@@ -3,6 +3,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 import ImageText from "@/components/ui/ImageText";
+import { FiDownload } from "react-icons/fi";
 
 export const metadata: Metadata = {
   title: "Rastreabilidade | Frigorífico MFB",
@@ -181,6 +182,18 @@ export default function Rastreabilidade() {
                 cadeia produtiva e o atendimento às exigências socioambientais
                 do setor.
               </p>
+
+              <div style={{ marginTop: "24px" }}>
+                <a
+                  href="/Relatorio_SARB_Frigorifico_Bezerra_2025_v2.pdf"
+                  download="Relatorio_SARB_Frigorifico_Bezerra_2025_v2.pdf"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-primary text-white text-sm sm:text-base font-semibold text-center transition-colors hover:bg-accent active:bg-primary-active"
+                  style={{ padding: "12px 24px" }}
+                >
+                  <FiDownload aria-hidden="true" className="shrink-0" />
+                  Baixar relatório SARB 2025 (PDF)
+                </a>
+              </div>
             </div>
 
             {/* GRÁFICO */}
