@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import qualidadeFrig from "../../../public/qualidade-frig.png";
 import HeroSection from "@/components/ui/HeroSection";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -24,7 +25,7 @@ export default function QualidadeDoProduto() {
           <ImageText
             title="Nosso Padrão de Excelência"
             content="A qualidade da carne fornecida é um critério inegociável para a nossa empresa. Além da excepcional qualidade, oferecemos total segurança alimentar, assumindo a responsabilidade de ofertar uma proteína segura que promove a saúde e a satisfação dos nossos clientes. Esse compromisso inabalável se estende também aos nossos subprodutos de origem animal (farinhas e sebo), direcionados de forma estrita e segura à indústria de alimentação animal."
-            image="/qualidade-frig.png"
+            image={qualidadeFrig}
             imagePosition="right"
             titleClassName="mb-[40px]"
           />

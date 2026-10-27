@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import compromissoComOPlaneta from "../../../public/compromisso-com-o-planeta.jpg";
 import HeroSection from "@/components/ui/HeroSection";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -25,7 +26,7 @@ export default function Sustentabilidade() {
           <ImageText
             title="Compromisso com o Planeta"
             content="A sustentabilidade não é apenas um programa, é parte do nosso DNA. Acreditamos que é possível produzir alimentos de alta qualidade em harmonia com o meio ambiente e com a sociedade."
-            image="/compromisso-com-o-planeta.jpg"
+            image={compromissoComOPlaneta}
             imagePosition="right"
             titleClassName="mb-[40px]"
           />

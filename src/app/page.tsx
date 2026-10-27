@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import equipeFrigorifico from "../../public/equipe-frigorifico.jpeg";
 import HeroSection from "@/components/ui/HeroSection";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -43,7 +44,7 @@ export default function Home() {
             contentClassName="leading-relaxed"
             buttonText="SAIBA MAIS"
             buttonHref="/sobre-nos"
-            image="/equipe-frigorifico.jpeg"
+            image={equipeFrigorifico}
             imagePosition="right"
           />
         </div>

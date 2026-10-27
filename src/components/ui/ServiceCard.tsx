@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ServiceCardProps {
   number: string | number;
   title: string;
@@ -18,12 +20,14 @@ export default function ServiceCard({
 
       {/* Image */}
       <div className={`flex justify-center ${reversed ? "md:order-last" : ""}`}>
-        <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-full max-w-md h-72 rounded-2xl overflow-hidden shadow-lg">
           {image ? (
-            <img
+            <Image
               src={image}
               alt={title}
-              className="w-full h-72 object-cover"
+              fill
+              sizes="(max-width: 767px) 100vw, 448px"
+              className="object-cover"
             />
           ) : (
             <div className="h-72 bg-gray-200 flex items-center justify-center text-gray-500">

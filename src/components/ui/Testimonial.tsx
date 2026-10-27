@@ -16,7 +16,7 @@ export default function Testimonial({
     <div className="bg-primary text-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col justify-center">
 
       <p className="italic text-base md:text-lg leading-relaxed mb-6">
-        "{content}"
+        &quot;{content}&quot;
       </p>
 
       {(author || role || location) && (

@@ -1,12 +1,10 @@
-import { Metadata } from "next";
-
 interface SchemaOrgProps {
   type: "Organization" | "LocalBusiness" | "Product";
-  data?: Record<string, any>;
+  data?: Record<string, unknown>;
 }
 
-export function SchemaOrg({ type, data }: SchemaOrgProps) {
-  const schemas: Record<string, any> = {
+export function SchemaOrg({ type }: SchemaOrgProps) {
+  const schemas: Partial<Record<SchemaOrgProps["type"], Record<string, unknown>>> = {
     Organization: {
       "@context": "https://schema.org",
       "@type": "Organization",
