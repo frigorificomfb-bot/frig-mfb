@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import grafico from "../../../public/grafico.jpg";
 import HeroSection from "@/components/ui/HeroSection";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -198,10 +200,11 @@ export default function Rastreabilidade() {
 
             {/* GRÁFICO */}
             <div className="flex justify-center">
-              <img
-                src="/grafico.jpg"
+              <Image
+                src={grafico}
                 alt="Gráfico de rastreabilidade de fornecedores"
-                className="w-full rounded-2xl shadow-2xl border border-gray-200"
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                className="w-full h-auto rounded-2xl shadow-2xl border border-gray-200"
               />
             </div>
           </div>

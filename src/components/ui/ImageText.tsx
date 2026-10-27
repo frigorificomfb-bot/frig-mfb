@@ -1,7 +1,9 @@
+import Image, { type StaticImageData } from "next/image";
+
 interface ImageTextProps {
   title: string;
   content: string;
-  image?: string;
+  image?: StaticImageData;
   imagePosition?: "left" | "right";
   buttonText?: string;
   buttonHref?: string;
@@ -24,10 +26,11 @@ export default function ImageText({
     <div className="flex justify-center items-center">
       <div className="w-full">
         {image && (
-          <img
+          <Image
             src={image}
             alt={title}
-            className="w-full h-full object-contain"
+            sizes="(max-width: 767px) 100vw, 50vw"
+            className="w-full h-auto object-contain"
             style={{ maxHeight: "600px" }}
           />
         )}
@@ -67,8 +70,6 @@ export default function ImageText({
     </div>
   );
 
-
-  const hasImage = Boolean(image);
 
   return (
     <div

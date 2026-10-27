@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   title: string;
   description: string;
@@ -24,8 +26,14 @@ export default function Card({
   const cardContent = (
     <>
       {image && (
-        <div className="mb-4 w-full h-36 rounded-lg overflow-hidden bg-gray-300 flex items-center justify-center">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+        <div className="relative mb-4 w-full h-36 rounded-lg overflow-hidden bg-gray-300 flex items-center justify-center">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+            className="object-cover"
+          />
         </div>
       )}
 
